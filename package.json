@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "install": "yarn add --global concurrently && yarn add --global typescript && yarn add --global pm2"
+  }
+}

@@ -137,3 +137,5 @@ manifest.json
   "background_color": "{{BACKGROUND_COLOR}}"
 }
 ```
+
+## machine setup
