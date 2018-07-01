@@ -128,9 +128,9 @@ manifest.json
       "type": "image/png"
     }
   ],
-  "background": [
+  "background": {
     "scripts": []
-  ],
+  },
   "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "{{THEME_COLOR}}",
