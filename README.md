@@ -33,13 +33,14 @@ html, body, main, .App {
   height: 100vvh;
 }
 
-.gpu-enabled {
+.enable-gpu {
   transform: translateZ(0);
   backface-visibility: hidden;
 }
 
 .flex-frame {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -79,7 +80,7 @@ manifest.json
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="canonical" href="{{CANONICAL_URL}}">
 
-<title>{PUBLIC_NAME}</title>
+<title>{{NAME}}</title>
 <meta name="description" content="{{DESCRIPTION}}">
 
 <!-- PWA -->
