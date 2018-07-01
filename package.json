@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "install": "yarn add --global concurrently && yarn add --global typescript && yarn add --global pm2"
+    "install": "yarn add --global concurrently && yarn add --global typescript && yarn add --global pm2 && yarn add --global create-react-app"
   }
 }

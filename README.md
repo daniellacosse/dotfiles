@@ -139,3 +139,9 @@ manifest.json
 ```
 
 ## machine setup
+
+TOOD: update [old script](https://gist.github.com/daniellacosse/a1725731a448512c04d849f6101b32d9)
+
+- `brew bundle`
+- `yarn install`
+- `pip install gcloud`

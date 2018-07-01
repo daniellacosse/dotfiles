@@ -13,7 +13,7 @@ brew "go"
 brew "dep"
 
 # python
-brew "python3"
+brew "python"
 
 # message brokers
 brew "kafka"
