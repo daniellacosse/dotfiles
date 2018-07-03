@@ -16,7 +16,6 @@ brew "dep"
 brew "python"
 
 # message brokers
-brew "kafka"
 brew "rabbitmq"
 
 # volumes/caches
