@@ -41,6 +41,8 @@ cask "rescuetime"
 cask "flux"
 cask "1password"
 cask "adobe-creative-cloud"
+cask "dash"
+cask "carbonite"
 
 # editors
 cask "visual-studio-code"
