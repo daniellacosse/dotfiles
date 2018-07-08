@@ -141,4 +141,4 @@ manifest.json
 
 ## machine setup
 
-- `bash machine-setup.sh`
+- `bash setup-machine.sh`
