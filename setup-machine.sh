@@ -26,3 +26,6 @@ code --install-extension ms-vscode.go
 
 code --install-extension richie5um2.vscode-sort-json
 code --install-extension zengxingxin.sort-js-object-keys
+
+code --install-extension eg2.tslint
+code --install-extension joelday.docthis
