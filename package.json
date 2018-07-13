@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "install": "npm i -g concurrently && npm i -g typescript && npm i -g pm2 && npm i -g create-react-app"
+    "install": "npm i -g concurrently && npm i -g typescript && npm i -g pm2 && npm i -g create-react-app && npm i -g ts-node"
   }
 }
