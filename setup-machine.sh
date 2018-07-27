@@ -18,6 +18,7 @@ code --install-extension sirtori.indenticator
 
 code --install-extension yzhang.markdown-all-in-one
 
+code --install-extension eamodio.gitlens
 code --install-extension felipecaputo.git-project-manager
 code --install-extension ziyasal.vscode-open-in-github
 
