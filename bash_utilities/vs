@@ -1,0 +1,5 @@
+ vs() {
+     # TODO: autocomplete
+
+     code ~/Documents/Code/$1 ~/Documents/Code/$1/readme.md
+ }
