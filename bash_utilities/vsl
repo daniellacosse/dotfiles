@@ -1,0 +1,5 @@
+vsl() {
+  # TODO: grep over titlecase subdirs
+
+  ls -1r ~/Documents/Code
+}
