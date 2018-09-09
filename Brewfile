@@ -16,7 +16,6 @@ brew "dep"
 brew "python"
 
 # message brokers
-brew "kafka"
 brew "rabbitmq"
 
 # volumes/caches
@@ -42,6 +41,7 @@ cask "rescuetime"
 cask "flux"
 cask "1password"
 cask "adobe-creative-cloud"
+cask "dash"
 
 # editors
 cask "visual-studio-code"
