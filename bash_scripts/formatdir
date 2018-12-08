@@ -22,7 +22,7 @@ fs.readdirSync("./").forEach(fileOrFolder => {
 });
 
 function handleMove(oldPath, newPath) {
-  if (oldPath === newPath) {                                                                                                                                    85%    30:6
+  if (oldPath === newPath) {
     return;
   }
 
