@@ -15,17 +15,12 @@ brew "dep"
 # python
 brew "python"
 
-# message brokers
-brew "rabbitmq"
-
 # volumes/caches
-brew "redis"
 brew "postgresql"
-brew "mysql"
 
 # deployment
 cask "docker"
-brew "kubectl"
+brew "kubernetes-cli"
 
 # media encoding
 brew "imagemagick"

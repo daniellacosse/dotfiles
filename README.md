@@ -1,5 +1,9 @@
 # pasteboard
 
+## machine setup
+
+- `bash setup-machine.sh`
+
 ## quick css reset
 
 ```css
@@ -34,7 +38,7 @@ html, body, main, .App {
 }
 
 .enable-gpu {
-  transform: translateZ(0);
+  transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
 }
 
@@ -138,7 +142,3 @@ manifest.json
   "background_color": "{{BACKGROUND_COLOR}}"
 }
 ```
-
-## machine setup
-
-- `bash setup-machine.sh`
