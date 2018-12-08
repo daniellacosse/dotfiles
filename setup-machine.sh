@@ -2,10 +2,12 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew bundle
 
+sudo easy_install pip
+
 # global node deps
 npm run install
 
-sudo easy_install pip
+pip install -r requirements.txt
 
 # shell
 git clone https://github.com/amix/vimrc.git ~/.vim_runtime
