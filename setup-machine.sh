@@ -7,15 +7,15 @@ npm run install
 
 sudo easy_install pip
 
-# vim
+# shell
 git clone https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 
-rm ~/.vim_runtime
+rm -rf ~/.vim_runtime
 
 cp ./bash_profile ~/.bash_profile
-cp ./bash_utilities ~/.bash_utilities
-cp ./bash_scripts ~/.bash_scripts
+cp -rf ./bash_utilities ~/.bash_utilities
+cp -rf ./bash_scripts ~/.bash_scripts
 
 source ~/.bash_profile
 
