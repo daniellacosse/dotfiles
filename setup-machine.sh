@@ -19,6 +19,9 @@ cp ./bash_profile ~/.bash_profile
 cp -rf ./bash_utilities ~/.bash_utilities
 cp -rf ./bash_scripts ~/.bash_scripts
 
+chmod -R u+x ~/.bash_utilities
+chmod -R u+x ~/.bash_scripts
+
 source ~/.bash_profile
 
 # vscode extensions
