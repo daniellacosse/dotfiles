@@ -38,7 +38,6 @@ code --install-extension ziyasal.vscode-open-in-github
 code --install-extension deerawan.vscode-dash
 code --install-extension peterjausovec.vscode-docker
 
-code --install-extension daltonjorge.scala
 code --install-extension ms-vscode.go
 
 code --install-extension richie5um2.vscode-sort-json
@@ -50,4 +49,3 @@ code --install-extension joelday.docthis
 code --install-extension formulahendry.auto-complete-tag
 code --install-extension wayou.vscode-todo-highlight
 code --install-extension wix.vscode-import-cost
-code --install-extension knisterpeter.vscode-commitizen

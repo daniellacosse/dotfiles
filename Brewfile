@@ -37,6 +37,7 @@ cask "flux"
 cask "1password"
 cask "adobe-creative-cloud"
 cask "dash"
+cask "runjs"
 
 # editors
 cask "visual-studio-code"
