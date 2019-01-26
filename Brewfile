@@ -20,7 +20,7 @@ brew "postgresql"
 
 # deployment
 cask "docker"
-brew "kubernetes-cli"
+cask "minikube"
 
 # media encoding
 brew "imagemagick"
