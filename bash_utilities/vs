@@ -1,6 +1,0 @@
- vs() {
-     # TODO: autocomplete
-     # TODO: look for folder inside Titlecase folders
-
-     code ~/Documents/Playground/Code/$1 ~/Documents/Playground/Code/$1/readme.md
- }

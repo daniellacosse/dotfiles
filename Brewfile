@@ -8,19 +8,10 @@ brew "git"
 brew "nvm"
 brew "yarn"
 
-# go
-brew "go"
-brew "dep"
-
-# python
-brew "python"
-
-# volumes/caches
-brew "postgresql"
-
 # deployment
 cask "docker"
 cask "minikube"
+cask "google-cloud-sdk"
 
 # media encoding
 brew "imagemagick"
