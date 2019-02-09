@@ -1,6 +1,6 @@
 BREW_BUFFER = curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install
 
-setup:
+setup: # TODO: http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
 	# brew
 	/usr/bin/ruby -e "$(BREW_BUFFER)"
 	brew bundle
