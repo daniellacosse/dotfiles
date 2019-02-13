@@ -33,6 +33,7 @@ cask "opera"
 
 # utilities
 cask "rescuetime"
+cask "keyboard-maestro"
 cask "flux"
 cask "1password"
 cask "adobe-creative-cloud"
