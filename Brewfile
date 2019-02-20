@@ -23,12 +23,15 @@ cask "firefox"
 cask "opera"
 
 # utilities
-cask "rescuetime"
-cask "flux"
 cask "1password"
 cask "adobe-creative-cloud"
 cask "dash"
+cask "flux"
+cask "keyboard-maestro"
+cask "nordvpn"
+cask "rescuetime"
 cask "runjs"
+# cask "trello"
 
 # editors
 cask "visual-studio-code"
