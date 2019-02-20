@@ -10,6 +10,7 @@ brew "yarn"
 
 # deployment
 cask "docker"
+cask "google-cloud-sdk"
 cask "minikube"
 cask "google-cloud-sdk"
 
