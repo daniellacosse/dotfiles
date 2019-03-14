@@ -167,7 +167,7 @@
 			</dict>
 		</array>
 		<key>Name</key>
-		<string>Pasteboard Macros</string>
+		<string>WayneBoard Macros</string>
 		<key>ToggleMacroUID</key>
 		<string>EF8E0DD7-2C75-4A34-9535-ACFF52D1FA0C</string>
 		<key>UID</key>
@@ -201,7 +201,7 @@
 						<key>MacroActionType</key>
 						<string>Pause</string>
 						<key>Time</key>
-						<string>1.5</string>
+						<string>1</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 					</dict>
@@ -223,7 +223,7 @@
 				<key>CreationDate</key>
 				<real>571764208.80279505</real>
 				<key>ModificationDate</key>
-				<real>572292987.62275302</real>
+				<real>572307072.93873596</real>
 				<key>Name</key>
 				<string>Open Git Project in VSCode</string>
 				<key>Triggers</key>
@@ -232,17 +232,7 @@
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>96</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>768</integer>
-					</dict>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>107</integer>
+						<integer>100</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
@@ -254,7 +244,7 @@
 			</dict>
 		</array>
 		<key>Name</key>
-		<string>Pasteboard Macros</string>
+		<string>WayneBoard Macros</string>
 		<key>ToggleMacroUID</key>
 		<string>EF8E0DD7-2C75-4A34-9535-ACFF52D1FA0C</string>
 		<key>UID</key>
@@ -300,9 +290,266 @@
 				<key>CreationDate</key>
 				<real>571764222.30347204</real>
 				<key>ModificationDate</key>
-				<real>572292520.83492005</real>
+				<real>572307077.40702701</real>
 				<key>Name</key>
 				<string>Open Terminal in VSCode</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>2143E116-4AB2-43CB-BD66-358BDED0DF14</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>WayneBoard Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>EF8E0DD7-2C75-4A34-9535-ACFF52D1FA0C</string>
+		<key>UID</key>
+		<string>3514F673-D435-43DF-9AF3-92BA60676E31</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>571768755.16065502</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>Asynchronously</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteMacro</string>
+						<key>MacroUID</key>
+						<string>DB6AD22F-EA27-4072-AC84-61926BC160AD</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>UseParameter</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>KeyCode</key>
+						<integer>35</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>4096</integer>
+						<key>ReleaseAll</key>
+						<false/>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+					<dict>
+						<key>KeyCode</key>
+						<integer>15</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+						<key>ReleaseAll</key>
+						<false/>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>572307457.35646904</real>
+				<key>ModificationDate</key>
+				<real>572307573.33935595</real>
+				<key>Name</key>
+				<string>Open VSCode Pull Request</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>103</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>E9C32309-75C7-442E-8359-EDDEF3FB92DA</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>WayneBoard Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>EF8E0DD7-2C75-4A34-9535-ACFF52D1FA0C</string>
+		<key>UID</key>
+		<string>3514F673-D435-43DF-9AF3-92BA60676E31</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>571768755.16065502</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>Asynchronously</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteMacro</string>
+						<key>MacroUID</key>
+						<string>DB6AD22F-EA27-4072-AC84-61926BC160AD</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>UseParameter</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>KeyCode</key>
+						<integer>15</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>572307128.27023196</real>
+				<key>ModificationDate</key>
+				<real>572308833.41405106</real>
+				<key>Name</key>
+				<string>Search Project in VSCode</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>101</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>61F4687E-5E9F-4022-9566-EA68CCC38C61</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>WayneBoard Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>EF8E0DD7-2C75-4A34-9535-ACFF52D1FA0C</string>
+		<key>UID</key>
+		<string>3514F673-D435-43DF-9AF3-92BA60676E31</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>571768755.16065502</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>KeyCode</key>
+						<integer>49</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>572307679.59871805</real>
+				<key>ModificationDate</key>
+				<real>572307698.97978199</real>
+				<key>Name</key>
+				<string>Search System</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>120</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>6DF134F8-F094-4609-8CCB-FDA3458AF8D0</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>WayneBoard Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>EF8E0DD7-2C75-4A34-9535-ACFF52D1FA0C</string>
+		<key>UID</key>
+		<string>3514F673-D435-43DF-9AF3-92BA60676E31</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>571768755.16065502</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(1,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(1,Left)</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Front</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(1,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(1,Width)*50%</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>572307719.40837502</real>
+				<key>ModificationDate</key>
+				<real>572308110.19644701</real>
+				<key>Name</key>
+				<string>Send active window left</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
@@ -313,13 +560,68 @@
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
-						<integer>768</integer>
+						<integer>0</integer>
 					</dict>
+				</array>
+				<key>UID</key>
+				<string>28852E94-1BB9-444F-8AB6-DA77856AF3C5</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>WayneBoard Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>EF8E0DD7-2C75-4A34-9535-ACFF52D1FA0C</string>
+		<key>UID</key>
+		<string>3514F673-D435-43DF-9AF3-92BA60676E31</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>571768755.16065502</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(1,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(1,MidX)</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Front</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(1,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(1,Width)*50%</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>572307888.37868798</real>
+				<key>ModificationDate</key>
+				<real>572308792.873402</real>
+				<key>Name</key>
+				<string>Send active window right</string>
+				<key>Triggers</key>
+				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>113</integer>
+						<integer>98</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
@@ -327,11 +629,62 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>2143E116-4AB2-43CB-BD66-358BDED0DF14</string>
+				<string>A7712579-AAFE-495B-8F9D-5A5BF7AEB836</string>
 			</dict>
 		</array>
 		<key>Name</key>
-		<string>Pasteboard Macros</string>
+		<string>WayneBoard Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>EF8E0DD7-2C75-4A34-9535-ACFF52D1FA0C</string>
+		<key>UID</key>
+		<string>3514F673-D435-43DF-9AF3-92BA60676E31</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>571768755.16065502</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>AllWindows</key>
+						<true/>
+						<key>AlreadyActivatedActionType</key>
+						<string>Normal</string>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.microsoft.VSCode</string>
+							<key>Name</key>
+							<string>Visual Studio Code</string>
+							<key>NewFile</key>
+							<string>/Applications/Visual Studio Code.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>ActivateApplication</string>
+						<key>ReopenWindows</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>572307211.775841</real>
+				<key>ModificationDate</key>
+				<real>572307265.88139403</real>
+				<key>Name</key>
+				<string>Show VSCode</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>DB6AD22F-EA27-4072-AC84-61926BC160AD</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>WayneBoard Macros</string>
 		<key>ToggleMacroUID</key>
 		<string>EF8E0DD7-2C75-4A34-9535-ACFF52D1FA0C</string>
 		<key>UID</key>

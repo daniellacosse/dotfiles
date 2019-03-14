@@ -32,7 +32,8 @@ cask "keyboard-maestro"
 cask "nordvpn"
 cask "rescuetime"
 cask "runjs"
-# cask "trello"
+cask "slack"
+cask "whatsapp"
 
 # editors
 cask "visual-studio-code"
