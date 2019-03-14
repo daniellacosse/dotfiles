@@ -8,20 +8,11 @@ brew "git"
 brew "nvm"
 brew "yarn"
 
-# go
-brew "go"
-brew "dep"
-
-# python
-brew "python"
-
-# volumes/caches
-brew "postgresql"
-
 # deployment
 cask "docker"
 cask "google-cloud-sdk"
 cask "minikube"
+cask "google-cloud-sdk"
 
 # media encoding
 brew "imagemagick"
@@ -38,11 +29,11 @@ cask "adobe-creative-cloud"
 cask "dash"
 cask "flux"
 cask "keyboard-maestro"
-# cask "magnet"
 cask "nordvpn"
 cask "rescuetime"
 cask "runjs"
-# cask "trello"
+cask "slack"
+cask "whatsapp"
 
 # editors
 cask "visual-studio-code"

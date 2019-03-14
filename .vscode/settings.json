@@ -1,0 +1,28 @@
+{
+  "breadcrumbs.enabled": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.tabSize": 2,
+  "explorer.confirmDragAndDrop": false,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "gitProjectManager.baseProjectsFolders": [
+    "~/Documents"
+  ],
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "prettier.tslintIntegration": true,
+  "terminal.integrated.rendererType": "dom",
+  "tslint.configFile": "tslint.yml",
+  "tslint.ignoreDefinitionFiles": false,
+  "tslint.packageManager": "yarn",
+  "tslint.run": "onSave",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vs-kubernetes": {
+    "vs-kubernetes.minikube-path": "~/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+  },
+  "window.zoomLevel": 3
+}
