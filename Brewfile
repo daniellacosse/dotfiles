@@ -8,22 +8,16 @@ brew "git"
 brew "nvm"
 brew "yarn"
 
-# deployment
-cask "docker"
-cask "google-cloud-sdk"
-cask "minikube"
-cask "google-cloud-sdk"
-
 # media encoding
 brew "imagemagick"
 brew "ffmpeg"
 
 # web browsers
-cask "google-chrome"
 cask "firefox"
-cask "opera"
+cask "google-chrome"
 
 # utilities
+brew "jq"
 cask "1password"
 cask "adobe-creative-cloud"
 cask "dash"
@@ -37,3 +31,9 @@ cask "whatsapp"
 
 # editors
 cask "visual-studio-code"
+
+# containers
+cask "google-cloud-sdk"
+cask "docker"
+cask "virtualbox"
+cask "vagrant"
