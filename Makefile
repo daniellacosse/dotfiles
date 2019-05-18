@@ -12,6 +12,8 @@ TMP_FILES = $(TMP_FOLDER)/last_bash \
 BASH_FOLDER=bash
 ASSETS_FOLDER=assets
 VSCODE_FOLDER=.vscode
+VSCODE_FILES=$(shell find $(VSCODE_FOLDER) -type d) \
+	$(shell find $(VSCODE_FOLDER) -type f -name '*')
 
 DASH_LICENSE_FILE=license.dash-license
 DASH_LICENSE=$(ASSETS_FOLDER)/$(DASH_LICENSE_FILE)
@@ -71,7 +73,7 @@ $(TMP_FOLDER)/last_yarn: $(TMP_FOLDER) $(NODE) package.json
 		xargs -L 1 yarn global add \
 			> $(TMP_FOLDER)/last_yarn 2>&1
 
-$(TMP_FOLDER)/last_code: $(TMP_FOLDER) $(TMP_FOLDER)/last_brew .vscode/extensions.json
+$(TMP_FOLDER)/last_code: $(TMP_FOLDER) $(TMP_FOLDER)/last_brew $(VSCODE_FILES)
 	cp .vscode $(SYSTEM_APPS_CONFIG)/Code/User ;\
 	cat .vscode/extensions.json |\
 		jq -r '.recommendations | .[]' |\
