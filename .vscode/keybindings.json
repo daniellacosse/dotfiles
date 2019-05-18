@@ -1,0 +1,6 @@
+// TODO
+[{
+  "key": "ctrl+alt+cmd+p",
+  "command": "commandId",
+  "when": "editorTextFocus"
+}]

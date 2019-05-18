@@ -31,24 +31,30 @@ SSH_FOLDER=$(HOME_FOLDER)/.ssh
 SSH_PEM=$(SSH_FOLDER)/id_rsa
 SSH_CONFIG=$(SSH_FOLDER)/config
 
-SYSTEM_APPS_CONFIG=/Library/Application\ Support
-CARBONITE_INSTALL_PAGE=https://account.carbonite.com/Computer/List
+SYSTEM_APPS_CONFIG=$(HOME_FOLDER)/Library/Application\ Support
+PREFERENCE_PANES_FOLDER=/System/Library/PreferencePanes
 
 # -- commands --
 .PHONY: default update
 
-# TODO: open installed bckground apps
-# TODO: unpack encrypted/zipped keyboard maestro license
+# TODO: open installed bckground apps - 
+	# 1password, nordvpn, rescuetime, flux, creative cloud, logitech, docker, keyboardmaestro, cricut, saffire
+
+# TODO: unpack encrypted keyboard maestro license
 default: $(TMP_FILES) $(SSH_PEM) $(DASH_LICENSE) $(MACROS)
-	open $(CARBONITE_INSTALL_PAGE)
-	\
 	cp $(DASH_LICENSE) $(SYSTEM_APPS_CONFIG)/Dash/License/license.dash-license ;\
  	\
-	open "x-apple.systempreferences:com.apple.preference.keyboard?Keyboard" ;\
-	read -p "1) select `Use F1, F2, etc. keys as standard function keys`" ;\
+	read -p "1) set dark mode & default browser" ;\
+	open $(PREFERENCE_PANES_FOLDER)/Appearance.prefPane/ ;\
 	\
-	open "x-apple.systempreferences:com.apple.preference.keyboard?Shortcuts" ;\
-	read -p "2) turn off `Display` and `Mission Control` function key shortcuts" ;\
+	read -p "2) select the photos album `Wallpapers` as the Desktop" ;\
+	open $(PREFERENCE_PANES_FOLDER)/DesktopScreenEffectsPref.prefPane/ ;\
+	\
+	read -p "3) select `Use F1, F2, etc. keys as standard function keys`, then turn off `Display` and `Mission Control` in the Shortcuts tab." ;\
+	open $(PREFERENCE_PANES_FOLDER)/Keyboard.prefPane/ ;\
+	\ 
+	read -p "4) select backup disk" ;\
+	open $(PREFERENCE_PANES_FOLDER)/TimeMachine.prefPane/
 
 update: $(TMP_FILES) $(MACROS)
 
@@ -88,7 +94,8 @@ $(SSH_PEM):
 	ssh-add -K $(SSH_PEM) ;\
 	\
 	echo $(SSH_PEM).pub ;\
-	read -p "Please add your public key to github."
+	read -p "Please add your public key to github." ;\
+	open https://github.com/settings/keys
 
 $(DASH_LICENSE):
 	open $(DASH_LICENSE_ZIP) ;\
