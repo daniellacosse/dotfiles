@@ -1,9 +1,13 @@
-// TODO: update
 {
   "breadcrumbs.enabled": true,
   "editor.renderWhitespace": "boundary",
   "editor.tabSize": 2,
-  "explorer.confirmDragAndDrop": false,
+  "editor.wordWrapColumn": 95,
+  "eslint.autoFixOnSave": true,
+  "eslint.packageManager": "yarn",
+  "eslint.run": "onSave",
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
@@ -15,6 +19,7 @@
   },
   "javascript.implicitProjectConfig.experimentalDecorators": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "prettier.eslintIntegration": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vs-kubernetes": {
     "vs-kubernetes.minikube-path": "/usr/local/bin/minikube"
