@@ -4,10 +4,10 @@ a set of scripts and utilities for setting my machine the way I like it
 
 ## initial
 
-- install brew
+-  install `homebrew`: [ [mac](https://brew.sh/) | [linux](https://docs.brew.sh/Homebrew-on-Linux) ]
 - ☁️ [download the zip](https://github.com/daniellacosse/machine-setup/archive/master.zip)
 - 🛠 run `make`
 
-## windows (TODO)
+## TODO: windows
 
-> - ♻️ switch to your windows partition
+> - ♻️ switch to your windows partition somehow (lol)
