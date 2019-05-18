@@ -2,7 +2,12 @@
 
 a set of scripts and utilities for setting my machine the way I like it
 
+## initial
+
+- install brew
 - ☁️ [download the zip](https://github.com/daniellacosse/machine-setup/archive/master.zip)
-- 🛠 `make setup` and _follow the instructions_
-- ♻️ switch to your new windows partition
-- 🤓 `make win-setup`
+- 🛠 run `make`
+
+## windows (TODO)
+
+> - ♻️ switch to your windows partition

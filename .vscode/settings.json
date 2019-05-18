@@ -1,3 +1,4 @@
+// TODO: update
 {
   "breadcrumbs.enabled": true,
   "editor.renderWhitespace": "boundary",
@@ -14,15 +15,9 @@
   },
   "javascript.implicitProjectConfig.experimentalDecorators": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "prettier.tslintIntegration": true,
-  "terminal.integrated.rendererType": "dom",
-  "tslint.configFile": "tslint.yml",
-  "tslint.ignoreDefinitionFiles": false,
-  "tslint.packageManager": "yarn",
-  "tslint.run": "onSave",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vs-kubernetes": {
-    "vs-kubernetes.minikube-path": "~/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+    "vs-kubernetes.minikube-path": "/usr/local/bin/minikube"
   },
   "window.zoomLevel": 3
 }
