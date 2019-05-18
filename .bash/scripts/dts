@@ -5,3 +5,5 @@ set -e
 mkdir -p $1 && cd $1
 
 yo @daniellacosse/typescript $1
+
+make

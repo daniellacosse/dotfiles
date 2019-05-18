@@ -3,7 +3,7 @@
     "node": ">= 12.0.0"
   },
   "dependencies": {
-    "@daniellacosse/accounting-cli": "^0.0.12",
+    "@daniellacosse/accounting-cli": "^0.0.16",
     "@daniellacosse/generator-typescript": "^0.0.3",
     "typescript": "",
     "ts-node": "^7.0.0",
