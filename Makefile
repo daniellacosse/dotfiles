@@ -72,7 +72,7 @@ $(TMP_FOLDER)/last_yarn: $(TMP_FOLDER) $(NODE) package.json
 			> $(TMP_FOLDER)/last_yarn 2>&1
 
 $(TMP_FOLDER)/last_code: $(TMP_FOLDER) $(TMP_FOLDER)/last_brew .vscode/extensions.json
-	cp .vscode/settings.json $(SYSTEM_APPS_CONFIG)/Code/User/settings.json ;\
+	cp .vscode $(SYSTEM_APPS_CONFIG)/Code/User ;\
 	cat .vscode/extensions.json |\
 		jq -r '.recommendations | .[]' |\
 		xargs -L 1 code --install-extension \
