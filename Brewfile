@@ -1,5 +1,4 @@
 tap "homebrew/cask"
-tap "homebrew/services"
 
 # version control
 brew "git"
@@ -8,22 +7,16 @@ brew "git"
 brew "nvm"
 brew "yarn"
 
-# deployment
-cask "docker"
-cask "google-cloud-sdk"
-cask "minikube"
-cask "google-cloud-sdk"
-
 # media encoding
 brew "imagemagick"
 brew "ffmpeg"
 
 # web browsers
-cask "google-chrome"
 cask "firefox"
-cask "opera"
+cask "google-chrome"
 
 # utilities
+brew "jq"
 cask "1password"
 cask "adobe-creative-cloud"
 cask "dash"
@@ -34,6 +27,25 @@ cask "rescuetime"
 cask "runjs"
 cask "slack"
 cask "whatsapp"
+cask "homebrew/cask-drivers/logitech-gaming-software"
+cask "cricut-design-space"
+mas "Giphy Capture", id: 668208984
+mas "Type Fu", id: 509818877
 
 # editors
 cask "visual-studio-code"
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+
+# containers
+cask "docker"
+cask "google-cloud-sdk"
+cask "minikube"
+
+# media
+cask "blender"
+cask "homebrew/cask-drivers/focusrite-saffire-mixcontrol"
+cask "musescore"
+cask "native-access"
+mas "Davinci Resolve", id: 571213070
+mas "Logic Pro X", id: 634148309

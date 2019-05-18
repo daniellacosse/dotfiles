@@ -2,7 +2,12 @@
 
 a set of scripts and utilities for setting my machine the way I like it
 
+## initial
+
+-  install `homebrew`: [ [mac](https://brew.sh/) | [linux](https://docs.brew.sh/Homebrew-on-Linux) ]
 - ☁️ [download the zip](https://github.com/daniellacosse/machine-setup/archive/master.zip)
-- 🛠 `make setup` and _follow the instructions_
-- ♻️ switch to your new windows partition
-- 🤓 `make win-setup`
+- 🛠 run `make`
+
+## TODO: windows
+
+> - ♻️ switch to your windows partition somehow (lol)

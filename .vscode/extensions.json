@@ -1,0 +1,24 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "deerawan.vscode-dash",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "felipecaputo.git-project-manager",
+    "formulahendry.auto-complete-tag",
+    "gruntfuggly.todo-tree",
+    "joelday.docthis",
+    "ms-kubernetes-tools.vscode-kubernetes-tools",
+    "peterjausovec.vscode-docker",
+    "qinjia.seti-icons",
+    "richie5um2.vscode-sort-json",
+    "ryanluker.vscode-coverage-gutters",
+    "sharat.vscode-brewfile",
+    "sirtori.indenticator",
+    "tnaseem.theme-seti",
+    "wix.vscode-import-cost",
+    "yzhang.markdown-all-in-one",
+    "zengxingxin.sort-js-object-keys",
+    "ziyasal.vscode-open-in-github"
+  ]
+}

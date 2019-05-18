@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export NVM_DIR=~/.nvm
+
+source $(brew --prefix nvm)/nvm.sh
+
+source ~/.bash_scripts/*
+PATH=$PATH:~/.bash_scripts/*
+
+alias profile="code ~/.bash_profile"
+alias scripts="code ~/.bash_scripts/$1"
