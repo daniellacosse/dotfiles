@@ -15,9 +15,10 @@ VSCODE_FOLDER=.vscode
 VSCODE_FILES=$(shell find $(VSCODE_FOLDER) -type d) \
 	$(shell find $(VSCODE_FOLDER) -type f -name '*')
 
-DASH_LICENSE_FILE=license.dash-license
-DASH_LICENSE=$(ASSETS_FOLDER)/$(DASH_LICENSE_FILE)
-DASH_LICENSE_ZIP=$(DASH_LICENSE).zip
+LICENSE_ZIP=$(ASSETS_FOLDER)/licenses.zip
+LICENSE_FOLDER=$(ASSETS_FOLDER)/licenses
+DASH_LICENSE=$(LICENSE_FOLDER)/license.dash-license
+MAESTRO_LICENSE=$(LICENSE_FOLDER)/license.keyboard-maestro
 
 MACROS=$(ASSETS_FOLDER)/macros.kmmacros
 
@@ -27,34 +28,43 @@ BASH_SCRIPTS=$(BASH_FOLDER)/scripts
 BASH_PROFILE_DEST=$(HOME_FOLDER)/.bash_profile
 BASH_SCRIPTS_DEST=$(HOME_FOLDER)/.bash_scripts
 
+SSH_TEMPLATE=$(ASSETS_FOLDER)/ssh-config.template
+
 SSH_FOLDER=$(HOME_FOLDER)/.ssh
 SSH_PEM=$(SSH_FOLDER)/id_rsa
 SSH_CONFIG=$(SSH_FOLDER)/config
 
 SYSTEM_APPS_CONFIG=$(HOME_FOLDER)/Library/Application\ Support
 PREFERENCE_PANES_FOLDER=/System/Library/PreferencePanes
+BACKGROUND_APPLICATIONS_LIST=$(ASSETS_FOLDER)/background-applications.list
 
 # -- commands --
 .PHONY: default update
 
-# TODO: open installed bckground apps - 
-	# 1password, nordvpn, rescuetime, flux, creative cloud, logitech, docker, keyboardmaestro, cricut, saffire
-
 # TODO: unpack encrypted keyboard maestro license
-default: $(TMP_FILES) $(SSH_PEM) $(DASH_LICENSE) $(MACROS)
+default: $(TMP_FILES) $(SSH_PEM) $(LICENSES)
 	cp $(DASH_LICENSE) $(SYSTEM_APPS_CONFIG)/Dash/License/license.dash-license ;\
  	\
-	read -p "1) set dark mode & default browser" ;\
+	read -p "1/7) set dark mode & default browser" ;\
 	open $(PREFERENCE_PANES_FOLDER)/Appearance.prefPane/ ;\
 	\
-	read -p "2) select the photos album `Wallpapers` as the Desktop" ;\
+	read -p "2/7) arrange windows & click-drag the little white bar over to the main display" ;\
+	open $(PREFERENCE_PANES_FOLDER)/Appearance.prefPane/ ;\
+	\
+	read -p "3/7) select the photos album `Wallpapers` as the Desktop" ;\
 	open $(PREFERENCE_PANES_FOLDER)/DesktopScreenEffectsPref.prefPane/ ;\
 	\
-	read -p "3) select `Use F1, F2, etc. keys as standard function keys`, then turn off `Display` and `Mission Control` in the Shortcuts tab." ;\
+	read -p "4/7) select `Use F1, F2, etc. keys as standard function keys`, then turn off `Display` and `Mission Control` in the Shortcuts tab." ;\
 	open $(PREFERENCE_PANES_FOLDER)/Keyboard.prefPane/ ;\
+	\
+	read -p "5/7) open and setup all background apps" ;\
+	cat $(BACKGROUND_APPLICATIONS_LIST) | xargs -L 1 open ;\
+	\
+	read -p "6/7) add license key && macros to keyboard maestro" ;\
+	cat $(MAESTRO_LICENSE) && make $(MACROS)
 	\ 
-	read -p "4) select backup disk" ;\
-	open $(PREFERENCE_PANES_FOLDER)/TimeMachine.prefPane/
+	read -p "7/7) select backup disk" ;\
+	open $(PREFERENCE_PANES_FOLDER)/TimeMachine.prefPane/ ;\
 
 update: $(TMP_FILES) $(MACROS)
 
@@ -90,16 +100,16 @@ $(SSH_PEM):
 	email=$(read -p "Enter your email address.") ;\
 	\
 	ssh-keygen -t rsa -b 4096 -C $$email ;\
-	cp $(ASSETS_FOLDER)/ssh-config.example $(SSH_CONFIG) ;\
+	cp $(SSH_TEMPLATE) $(SSH_CONFIG) ;\
 	ssh-add -K $(SSH_PEM) ;\
 	\
 	echo $(SSH_PEM).pub ;\
 	read -p "Please add your public key to github." ;\
 	open https://github.com/settings/keys
 
-$(DASH_LICENSE):
-	open $(DASH_LICENSE_ZIP) ;\
-	read -p "unarchive the dash license..."
+$(LICENSES):
+	open $(LICENSE_ZIP) ;\
+	read -p "Unarchive all necessary licenses..."
 
 $(MACROS):
 	open $(MACROS)
