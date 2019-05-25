@@ -21,11 +21,6 @@ LICENSE_FOLDER=$(ASSETS_FOLDER)/licenses
 DASH_LICENSE=$(LICENSE_FOLDER)/license.dash-license
 MAESTRO_LICENSE=$(LICENSE_FOLDER)/license.keyboard-maestro
 
-KEYBINDINGS_FILENAME=DefaultKeyBinding.dict
-KEYBINDINGS=$(ASSETS_FOLDER)/$(KEYBINDINGS_FILENAME)
-SYSTEM_KEYBINDINGS_FOLDER=$(LIBRARY_FOLDER)/KeyBindings
-SYSTEM_KEYBINDINGS=$(SYSTEM_KEYBINDINGS_FOLDER)/$(KEYBINDINGS_FILENAME)
-
 MACROS=$(ASSETS_FOLDER)/macros.kmmacros
 
 BASH_PROFILE=$(BASH_FOLDER)/profile
@@ -50,7 +45,7 @@ SYSTEM_PREFERENCE_PANES_FOLDER=/System/Library/PreferencePanes
 .PHONY: default update
 
 # TODO: unpack encrypted keyboard maestro license
-default: $(TMP_FILES) $(SYSTEM_SSH_PEM) $(LICENSES) $(SYSTEM_KEYBINDINGS)
+default: $(TMP_FILES) $(SYSTEM_SSH_PEM) $(LICENSES)
 	cp $(DASH_LICENSE) $(SYSTEM_APPS_CONFIG)/Dash/License/license.dash-license ;\
  	\
 	read -p "1/7) set dark mode & default browser" ;\
@@ -116,12 +111,6 @@ $(SYSTEM_SSH_PEM):
 	echo $(SYSTEM_SSH_PEM).pub ;\
 	read -p "Please add your public key to github." ;\
 	open https://github.com/settings/keys
-
-$(SYSTEM_KEYBINDINGS): $(SYSTEM_KEYBINDINGS_FOLDER)
-	sudo cp $(KEYBINDINGS) $(SYSTEM_KEYBINDINGS)
-
-$(SYSTEM_KEYBINDINGS_FOLDER):
-	sudo mkdir -p $(SYSTEM_KEYBINDINGS_FOLDER)
 
 $(LICENSES):
 	open $(LICENSE_ZIP) ;\
