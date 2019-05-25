@@ -8,6 +8,6 @@ machine-level setup scripts and config files
 - ☁️ [download the zip](https://github.com/daniellacosse/dotfiles/archive/master.zip)
 - 🛠 run `make`
 
-## TODO: windows
+## TODO: bootcamp
 
 > - ♻️ switch to your windows partition somehow (lol)
