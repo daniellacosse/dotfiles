@@ -44,7 +44,6 @@ SYSTEM_PREFERENCE_PANES_FOLDER=/System/Library/PreferencePanes
 # -- commands --
 .PHONY: default update
 
-# TODO: unpack encrypted keyboard maestro license
 default: $(TMP_FILES) $(SYSTEM_SSH_PEM) $(LICENSES)
 	cp $(DASH_LICENSE) $(SYSTEM_APPS_CONFIG)/Dash/License/license.dash-license ;\
  	\
