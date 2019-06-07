@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -e
+
+# webloc <url> <filename>
+# --
+# example:
+#   webloc https://google.com search-engine
+#     => creates a `search-engine.webloc` that goes to google.com
+
+url=$1
+filename=${2}.webloc
+
+(
+  cat <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>URL</key>
+    <string>${1}</string>
+</dict>
+</plist>
+EOF
+) > $filename

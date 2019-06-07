@@ -17,18 +17,20 @@ cask "google-chrome"
 
 # utilities
 brew "jq"
+brew "unrar"
 cask "1password"
 cask "adobe-creative-cloud"
+cask "cricut-design-space"
 cask "dash"
 cask "flux"
+cask "homebrew/cask-drivers/logitech-gaming-software"
 cask "keyboard-maestro"
 cask "nordvpn"
 cask "rescuetime"
 cask "runjs"
 cask "slack"
+cask "wacom-tablet"
 cask "whatsapp"
-cask "homebrew/cask-drivers/logitech-gaming-software"
-cask "cricut-design-space"
 mas "Giphy Capture", id: 668208984
 mas "Type Fu", id: 509818877
 
@@ -47,5 +49,10 @@ cask "blender"
 cask "homebrew/cask-drivers/focusrite-saffire-mixcontrol"
 cask "musescore"
 cask "native-access"
-mas "Davinci Resolve", id: 571213070
+cask "steam"
+cask "unity"
+cask "unity-web-player"
+cask "unity-webgl-support-for-editor"
+# -- trapcode is premiere/ae only. until such a day as i move away from adobe --
+# mas "Davinci Resolve", id: 571213070
 mas "Logic Pro X", id: 634148309
