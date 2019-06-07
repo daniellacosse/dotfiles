@@ -45,35 +45,39 @@ SYSTEM_PREFERENCE_PANES_FOLDER=/System/Library/PreferencePanes
 .PHONY: default update
 
 default: $(TMP_FILES) $(SYSTEM_SSH_PEM) $(LICENSE_FOLDER)
-	read -p "1) set default browser" ;\
+	read -p "1/11) set default browser" ;\
 	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Appearance.prefPane/ ;\
 	\
-	read -p "4) set date and time preferences" ;\
+	read -p "2/11) set date and time preferences" ;\
 	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/DateAndTime.prefPane/ ;\
 	\
-	read -p "2) arrange windows & click-drag the little white bar over to the main display" ;\
+	read -p "3/11) arrange windows & click-drag the little white bar over to the main display" ;\
 	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Displays.prefPane/ ;\
 	\
-	read -p "3) select the photos album -Wallpapers- as the Desktop" ;\
+	read -p "4/11) select the photos album -Wallpapers- as the Desktop" ;\
 	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/DesktopScreenEffectsPref.prefPane/ ;\
 	\
-	read -p "4) setup touchbar, then turn off function key shortcuts in the Shortcuts tab." ;\
+	read -p "5/11 setup touchbar, then turn off function key shortcuts in the Shortcuts tab." ;\
 	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Keyboard.prefPane/ ;\
 	\
-	read -p "4) connect bluetooth keyboard and trackpad" ;\
+	read -p "6/11) connect bluetooth keyboard and trackpad" ;\
 	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Bluetooth.prefPane/ ;\
 	\
-	read -p "5) open and setup all background apps" ;\
+	read -p "7/11) open and setup all background apps" ;\
 	cat $(BACKGROUND_APPLICATIONS_LIST) | xargs -L 1 open ;\
 	\
-	read -p "6) add license key && macros" ;\
-	cp $(DASH_LICENSE) $(SYSTEM_APPS_CONFIG)/Dash/License/license.dash-license ;\
-	cat $(MAESTRO_LICENSE) && make $(MACROS)
+	read -p "8/11) add ssh key to github" ;\
+	make $(SYSTEM_SSH_PEM)
 	\
-	read -p "7) setup nvidia eGPU" ;\
+	read -p "9/11) add license key && macros" ;\
+	make $(LICENSE_FOLDER) ;\
+	cp $(DASH_LICENSE) $(SYSTEM_APPS_CONFIG)/Dash/License/license.dash-license ;\
+	cat $(MAESTRO_LICENSE) && make $(MACROS) ;\
+	\
+	read -p "10/11) setup nvidia eGPU" ;\
 	bash <(curl -s https://raw.githubusercontent.com/learex/macOS-eGPU/master/macOS-eGPU.sh) --beta --nvidiaDriver 387.10.10.10.40.113 --iopcieTunneledPatch ;\
 	\
-	read -p "8) data transfer from previous mac - use spotlight to open 'migration assisstant'"
+	read -p "11/11) data transfer from previous mac - use spotlight to open 'migration assistant'"
 	# \ 
 	# read -p "7/7) select backup disk" ;\
 	# open $(SYSTEM_PREFERENCE_PANES_FOLDER)/TimeMachine.prefPane/ ;\
