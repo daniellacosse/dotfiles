@@ -5,8 +5,8 @@ HOME_FOLDER=~
 LIBRARY_FOLDER=$(HOME_FOLDER)/Library
 
 TMP_FOLDER = $(HOME_FOLDER)/.tmp
-TMP_FILES = $(TMP_FOLDER)/last_bash \
-	$(TMP_FOLDER)/last_brew \
+TMP_FILES = $(TMP_FOLDER)/last_brew \
+	$(TMP_FOLDER)/last_bash \
 	$(TMP_FOLDER)/last_yarn \
 	$(TMP_FOLDER)/last_code
 
@@ -49,7 +49,7 @@ default: $(TMP_FILES) $(SYSTEM_SSH_PEM) $(LICENSE_FOLDER)
 	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Appearance.prefPane/ ;\
 	\
 	read -p "4) set date and time preferences" ;\
-	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Bluetooth.prefPane/ ;\
+	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/DateAndTime.prefPane/ ;\
 	\
 	read -p "2) arrange windows & click-drag the little white bar over to the main display" ;\
 	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Displays.prefPane/ ;\
@@ -69,10 +69,11 @@ default: $(TMP_FILES) $(SYSTEM_SSH_PEM) $(LICENSE_FOLDER)
 	read -p "6) add license key && macros" ;\
 	cp $(DASH_LICENSE) $(SYSTEM_APPS_CONFIG)/Dash/License/license.dash-license ;\
 	cat $(MAESTRO_LICENSE) && make $(MACROS)
-	# \
-	# read -p "7) insert the windows drive, then install bootcamp" ;\
-
-
+	\
+	read -p "7) setup nvidia eGPU" ;\
+	bash <(curl -s https://raw.githubusercontent.com/learex/macOS-eGPU/master/macOS-eGPU.sh) --beta --nvidiaDriver 387.10.10.10.40.113 --iopcieTunneledPatch ;\
+	\
+	read -p "8) data transfer from previous mac - use spotlight to open 'migration assisstant'"
 	# \ 
 	# read -p "7/7) select backup disk" ;\
 	# open $(SYSTEM_PREFERENCE_PANES_FOLDER)/TimeMachine.prefPane/ ;\
@@ -83,18 +84,18 @@ update: $(TMP_FILES) $(MACROS)
 $(TMP_FOLDER):
 	mkdir -p $(TMP_FOLDER)
 
-$(TMP_FOLDER)/last_bash: $(TMP_FOLDER) $(BASH_PROFILE) $(BASH_SCRIPTS)
-	chmod -R u+x $(BASH_SCRIPTS) 								> $(TMP_FOLDER)/last_bash 2>&1 ;\
-	cp -fa $(BASH_SCRIPTS)/. $(HOME_FOLDER)/.bash_scripts >> $(TMP_FOLDER)/last_bash 2>&1  ;\
-	\
-	cp -f $(BASH_AUTOCOMPLETION) $(HOME_FOLDER)/$(BASH_AUTOCOMPLETION) >> $(TMP_FOLDER)/last_bash 2>&1 ;\
-	\
-	cp -f $(BASH_PROFILE) $(HOME_FOLDER)/.bash_profile			>> $(TMP_FOLDER)/last_bash 2>&1  ;\
-	source $(HOME_FOLDER)/.bash_profile									>> $(TMP_FOLDER)/last_bash 2>&1
-
 $(TMP_FOLDER)/last_brew: $(TMP_FOLDER) Brewfile
 	brew bundle \
 		> $(TMP_FOLDER)/last_brew 2>&1
+
+$(TMP_FOLDER)/last_bash: $(TMP_FOLDER) $(NODE)
+	chmod -R u+x $(BASH_SCRIPTS) 								         > $(TMP_FOLDER)/last_bash 2>&1 ;\
+	cp -R $(BASH_SCRIPTS)/. $(HOME_FOLDER)/.bash_scripts >> $(TMP_FOLDER)/last_bash 2>&1  ;\
+	\
+	cp $(BASH_AUTOCOMPLETION) $(HOME_FOLDER)/.$(BASH_AUTOCOMPLETION) >> $(TMP_FOLDER)/last_bash 2>&1 ;\
+	\
+	cp $(BASH_PROFILE) $(HOME_FOLDER)/.bash_profile			>> $(TMP_FOLDER)/last_bash 2>&1  ;\
+	source $(HOME_FOLDER)/.bash_profile									>> $(TMP_FOLDER)/last_bash 2>&1
 
 $(TMP_FOLDER)/last_yarn: $(TMP_FOLDER) package.json
 	cat package.json |\
@@ -130,7 +131,7 @@ $(LICENSE_FOLDER):
 $(MACROS):
 	open $(MACROS)
 
-# $(NODE): $(TMP_FOLDER)/last_brew
-# 	cat package.json |\
-# 		jq -r '.engines.node' |\
-# 			nvm install
+$(NODE):
+	export NVM_DIR=~/.nvm ;\
+	source $(brew --prefix nvm)/nvm.sh ;\
+	nvm install $(cat package.json | jq -r '.engines.node')
