@@ -1,15 +1,15 @@
-# machine-setup 💻
+# dotfiles 💻
 
-a set of scripts and utilities for setting my machine the way I like it
+machine-level setup scripts and config files
 
 ## initial
 
 **NOTE: this setup requires OSX13, High Sierra**
 
 -  install `homebrew`: [ [mac](https://brew.sh/) | [linux](https://docs.brew.sh/Homebrew-on-Linux) ]
-- ☁️ [download the zip](https://github.com/daniellacosse/machine-setup/archive/master.zip)
+- ☁️ [download the zip](https://github.com/daniellacosse/dotfiles/archive/master.zip)
 - 🛠 run `make`
 
-## TODO: windows
+## TODO: bootcamp
 
 > - ♻️ switch to your windows partition somehow (lol)
