@@ -4,4 +4,4 @@ export NVM_DIR=~/.nvm
 
 source $(brew --prefix nvm)/nvm.sh
 
-PATH=$PATH:~/.bash_scripts/*
+PATH=$PATH:~/.bash_scripts
