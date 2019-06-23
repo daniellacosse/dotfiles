@@ -48,6 +48,7 @@ cask "google-cloud-sdk"
 
 # media
 cask "blender"
+cask "ultimaker-cura"
 cask "homebrew/cask-drivers/focusrite-saffire-mixcontrol"
 cask "musescore"
 cask "native-access"
