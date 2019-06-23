@@ -47,7 +47,7 @@ cask "docker"
 cask "google-cloud-sdk"
 
 # media
-cask "blender"
+cask "blender" # ...and autodesk? "1 blender unit = 1 millimeter"
 cask "ultimaker-cura"
 cask "homebrew/cask-drivers/focusrite-saffire-mixcontrol"
 cask "musescore"
