@@ -16,10 +16,13 @@ cask "firefox"
 cask "google-chrome"
 
 # utilities
+brew "libicns"
 brew "jq"
 brew "unrar"
 cask "1password"
 cask "adobe-creative-cloud"
+cask "backblaze"
+cask "cold-turkey-blocker"
 cask "cricut-design-space"
 cask "dash"
 cask "flux"
@@ -42,17 +45,13 @@ mas "Pages", id: 409201541
 # containers
 cask "docker"
 cask "google-cloud-sdk"
-cask "minikube"
 
 # media
-cask "blender"
+cask "blender" # ...and autodesk? "1 blender unit = 1 millimeter"
+cask "ultimaker-cura"
 cask "homebrew/cask-drivers/focusrite-saffire-mixcontrol"
 cask "musescore"
 cask "native-access"
 cask "steam"
-cask "unity"
-cask "unity-web-player"
-cask "unity-webgl-support-for-editor"
-# -- trapcode is premiere/ae only. until such a day as i move away from adobe --
-# mas "Davinci Resolve", id: 571213070
+# cask "godot"
 mas "Logic Pro X", id: 634148309
