@@ -98,7 +98,7 @@ $(TMP_FOLDER)/update: $(TMP_FILES)
 # -- cache --
 
 $(TMP_FOLDER)/last_brew: Brewfile
-	brew bundle \
+	brew bundle --force \
 		> $(TMP_FOLDER)/last_brew
 
 Brewfile: # track
