@@ -2,6 +2,7 @@ tap "homebrew/cask"
 
 # version control
 brew "git"
+brew "make"
 
 # javascript
 brew "nvm"
