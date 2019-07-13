@@ -43,7 +43,9 @@ SYSTEM_PREFERENCE_PANES_FOLDER=/System/Library/PreferencePanes
 # -- commands --
 .PHONY: default update
 
-default: $(TMP_FILES) $(LICENSE_FOLDER)
+default: $(TMP_FOLDER) $(LICENSE_FOLDER)
+	make $(TMP_FILES) ;\
+	\
 	read -p "1/14) set colors & default browser" ;\
 	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Appearance.prefPane/ ;\
 	\
@@ -88,37 +90,48 @@ default: $(TMP_FILES) $(LICENSE_FOLDER)
 	read -p "14/14) setup nvidia eGPU. make sure it's not plugged in now - hot-plug it in after startup but before login" ;\
 	bash <(curl -s https://raw.githubusercontent.com/learex/macOS-eGPU/master/macOS-eGPU.sh)
 
-update: $(TMP_FILES)
+update: $(TMP_FOLDER)
+	make $(TMP_FOLDER)/update
+
+$(TMP_FOLDER)/update: $(TMP_FILES)
 
 # -- cache --
 
-$(TMP_FOLDER)/last_brew: $(TMP_FOLDER) Brewfile
+$(TMP_FOLDER)/last_brew: Brewfile
 	brew bundle \
-		> $(TMP_FOLDER)/last_brew 2>&1
+		> $(TMP_FOLDER)/last_brew
 
-$(TMP_FOLDER)/last_bash: $(TMP_FOLDER)
+Brewfile: # track
+
+$(TMP_FOLDER)/last_bash: $(BASH_PROFILE) $(BASH_SCRIPTS)
 	chmod -R u+x $(BASH_SCRIPTS)													> $(TMP_FOLDER)/last_bash 2>&1 ;\
-	cp -R $(BASH_SCRIPTS)/. $(HOME_FOLDER)/.bash_scripts 	>> $(TMP_FOLDER)/last_bash 2>&1 ;\
+	cp -R $(BASH_SCRIPTS)/. $(HOME_FOLDER)/.bash_scripts 	>> $(TMP_FOLDER)/last_bash ;\
 	\
-	cp $(BASH_AUTOCOMPLETION) $(HOME_FOLDER)/.$(BASH_AUTOCOMPLETION) >> $(TMP_FOLDER)/last_bash 2>&1 ;\
+	cp $(BASH_AUTOCOMPLETION) $(HOME_FOLDER)/.$(BASH_AUTOCOMPLETION) >> $(TMP_FOLDER)/last_bash ;\
 	\
-	cp $(BASH_PROFILE) $(HOME_FOLDER)/.bash_profile					>> $(TMP_FOLDER)/last_bash 2>&1 ;\
+	cp $(BASH_PROFILE) $(HOME_FOLDER)/.bash_profile					>> $(TMP_FOLDER)/last_bash ;\
 	source $(HOME_FOLDER)/.bash_profile											>> $(TMP_FOLDER)/last_bash 2>&1 ;\
-	nvm install $(cat package.json | jq -r '.engines.node') >> $(TMP_FOLDER)/last_bash 2>&1
+	nvm install $(cat package.json | jq -r '.engines.node') >> $(TMP_FOLDER)/last_bash
 
+$(BASH_PROFILE):
+$(BASH_SCRIPTS): # track
 
-$(TMP_FOLDER)/last_yarn: $(TMP_FOLDER) package.json
+$(TMP_FOLDER)/last_yarn: package.json
 	cat package.json |\
 		jq -r '.dependencies | keys | .[]' |\
 		xargs -L 1 yarn global add \
-			> $(TMP_FOLDER)/last_yarn 2>&1
+			> $(TMP_FOLDER)/last_yarn
 
-$(TMP_FOLDER)/last_code: $(TMP_FOLDER) $(TMP_FOLDER)/last_brew $(VSCODE_FILES)
+package.json: # track
+
+$(TMP_FOLDER)/last_code: $(TMP_FOLDER)/last_brew .vscode/extensions.json
 	sudo cp -fa .vscode/. $(SYSTEM_APPS_CONFIG)/Code/User ;\
 	cat .vscode/extensions.json |\
 		jq -r '.recommendations | .[]' |\
 		xargs -L 1 code --install-extension \
-			> $(TMP_FOLDER)/last_code 2>&1
+			> $(TMP_FOLDER)/last_code
+
+.vscode/extensions.json: # track
 
 $(SYSTEM_SSH_PEM): $(SYSTEM_SSH_FOLDER)
 	read -p "Enter your email address: " email ;\
