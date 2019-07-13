@@ -16,8 +16,5 @@
   "javascript.implicitProjectConfig.experimentalDecorators": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "vs-kubernetes": {
-    "vs-kubernetes.minikube-path": "/usr/local/bin/minikube"
-  },
   "window.zoomLevel": 3
 }
