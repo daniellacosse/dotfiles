@@ -1,6 +1,7 @@
 {
   "breadcrumbs.enabled": true,
   "editor.renderWhitespace": "boundary",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "git.autofetch": true,
