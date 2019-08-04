@@ -155,3 +155,6 @@ $(SYSTEM_SSH_FOLDER):
 $(LICENSE_FOLDER):
 	open $(LICENSE_ZIP) ;\
 	read -p "Unarchive all necessary licenses..."
+
+$(LICENSE_ZIP):
+	zip -uer $(LICENSE_ZIP) $(LIBRARY_FOLDER)
