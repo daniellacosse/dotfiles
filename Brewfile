@@ -44,13 +44,16 @@ cask "visual-studio-code"
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 
+# data
+# cask "neo4j"
+# cask "graphiql"
+
 # containers
 cask "docker"
 cask "google-cloud-sdk"
 
 # media
-cask "blender" # ...and autodesk? "1 blender unit = 1 millimeter"
-cask "ultimaker-cura"
+cask "blender"
 cask "homebrew/cask-drivers/focusrite-saffire-mixcontrol"
 cask "musescore"
 cask "native-access"
@@ -58,5 +61,4 @@ cask "steam"
 cask "obs"
 cask "unity"
 cask "unity-hub"
-# cask "godot"
 mas "Logic Pro X", id: 634148309
