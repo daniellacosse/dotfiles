@@ -61,4 +61,5 @@ cask "steam"
 cask "obs"
 cask "unity"
 cask "unity-hub"
+cask "vlc"
 mas "Logic Pro X", id: 634148309
