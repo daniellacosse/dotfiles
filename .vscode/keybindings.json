@@ -206,9 +206,5 @@
 {
   "key": "cmd+k cmd+k",
   "command": "workbench.action.showCommands"
-},
-{
-  "key": "shift+cmd+p",
-  "command": "-workbench.action.showCommands"
 }
 ]
