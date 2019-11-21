@@ -1,6 +1,121 @@
-// TODO
-[{
+[
+{
   "key": "ctrl+alt+cmd+p",
-  "command": "commandId",
   "when": "editorTextFocus"
-}]
+},
+{
+  "key": "cmd+t",
+  "command": "workbench.action.files.newUntitledFile"
+},
+{
+  "key": "cmd+n",
+  "command": "-workbench.action.files.newUntitledFile"
+},
+{
+  "key": "cmd+t",
+  "command": "-workbench.action.showAllSymbols"
+},
+{
+  "key": "cmd+n",
+  "command": "workbench.action.newWindow"
+},
+{
+  "key": "shift+cmd+n",
+  "command": "-workbench.action.newWindow"
+},
+{
+  "key": "shift+cmd+t",
+  "command": "workbench.action.splitEditor"
+},
+{
+  "key": "cmd+\\",
+  "command": "-workbench.action.splitEditor"
+},
+{
+  "key": "shift+alt+cmd+t",
+  "command": "workbench.action.splitEditorOrthogonal"
+},
+{
+  "key": "cmd+k cmd+\\",
+  "command": "-workbench.action.splitEditorOrthogonal"
+},
+{
+  "key": "shift+cmd+t",
+  "command": "workbench.action.terminal.split",
+  "when": "terminalFocus"
+},
+{
+  "key": "ctrl+shift+5",
+  "command": "-workbench.action.terminal.split",
+  "when": "terminalFocus"
+},
+{
+  "key": "cmd+\\",
+  "command": "-workbench.action.terminal.split",
+  "when": "terminalFocus"
+},
+{
+  "key": "cmd+w",
+  "command": "workbench.action.terminal.kill",
+  "when": "terminalFocus"
+},
+{
+  "key": "ctrl+alt+cmd+down",
+  "command": "workbench.action.terminal.focus"
+},
+{
+  "key": "ctrl+`",
+  "command": "-workbench.action.terminal.toggleTerminal"
+},
+{
+  "key": "ctrl+alt+cmd+left",
+  "command": "workbench.action.navigateToLastEditLocation"
+},
+{
+  "key": "cmd+k cmd+q",
+  "command": "-workbench.action.navigateToLastEditLocation"
+},
+{
+  "key": "cmd+k g",
+  "command": "extension.openInGitHub"
+},
+{
+  "key": "ctrl+l g",
+  "command": "-extension.openInGitHub"
+},
+{
+  "key": "cmd+k p",
+  "command": "extension.openPrGitProvider"
+},
+{
+  "key": "ctrl+l p",
+  "command": "-extension.openPrGitProvider"
+},
+{
+  "key": "cmd+k p",
+  "command": "-workbench.action.files.copyPathOfActiveFile"
+},
+{
+  "key": "ctrl+alt+cmd+up",
+  "command": "workbench.action.focusFirstEditorGroup",
+  "when": "terminalFocus"
+},
+{
+  "key": "cmd+1",
+  "command": "-workbench.action.focusFirstEditorGroup"
+},
+{
+  "key": "cmd+w",
+  "command": "-workbench.action.closeWindow",
+  "when": "!editorIsOpen && !multipleEditorGroups"
+},
+{
+  "key": "shift+cmd+r",
+  "command": "workbench.action.reloadWindow"
+},
+{
+  "key": "cmd+r",
+  "command": "-workbench.action.reloadWindow",
+  "when": "isDevelopment"
+}
+]
