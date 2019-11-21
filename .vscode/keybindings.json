@@ -117,5 +117,98 @@
   "key": "cmd+r",
   "command": "-workbench.action.reloadWindow",
   "when": "isDevelopment"
+},
+{
+  "key": "cmd+k cmd+s",
+  "command": "-workbench.action.openGlobalKeybindings"
+},
+{
+  "key": "cmd+k cmd+s",
+  "command": "workbench.view.scm"
+},
+{
+  "key": "ctrl+shift+g",
+  "command": "-workbench.view.scm"
+},
+{
+  "key": "cmd+k cmd+f",
+  "command": "-editor.action.formatSelection",
+  "when": "editorHasDocumentSelectionFormattingProvider && editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+},
+{
+  "key": "cmd+k cmd+f",
+  "command": "workbench.action.findInFiles"
+},
+{
+  "key": "shift+cmd+f",
+  "command": "-workbench.action.findInFiles"
+},
+{
+  "key": "cmd+k cmd+d",
+  "command": "-editor.action.moveSelectionToNextFindMatch",
+  "when": "editorFocus"
+},
+{
+  "key": "cmd+k cmd+d",
+  "command": "workbench.view.debug"
+},
+{
+  "key": "shift+cmd+d",
+  "command": "-workbench.view.debug"
+},
+{
+  "key": "cmd+k cmd+x",
+  "command": "-editor.action.trimTrailingWhitespace",
+  "when": "editorTextFocus && !editorReadonly"
+},
+{
+  "key": "cmd+k cmd+x",
+  "command": "workbench.view.extensions"
+},
+{
+  "key": "shift+cmd+x",
+  "command": "-workbench.view.extensions"
+},
+{
+  "key": "cmd+k cmd+e",
+  "command": "-keybindings.editor.defineWhenExpression",
+  "when": "inKeybindings && keybindingFocus"
+},
+{
+  "key": "cmd+k cmd+e",
+  "command": "workbench.view.explorer"
+},
+{
+  "key": "shift+cmd+e",
+  "command": "-workbench.view.explorer"
+},
+{
+  "key": "cmd+k cmd+t",
+  "command": "-workbench.action.selectTheme"
+},
+{
+  "key": "cmd+k cmd+a",
+  "command": "workbench.view.extension.atlascode-drawer"
+},
+{
+  "key": "cmd+k cmd+t",
+  "command": "workbench.view.extension.todo-tree-container"
+},
+{
+  "key": "cmd+k cmd+l",
+  "command": "-editor.toggleFold",
+  "when": "editorTextFocus && foldingEnabled"
+},
+{
+  "key": "cmd+k cmd+l",
+  "command": "workbench.view.extension.gitlens"
+},
+{
+  "key": "cmd+k cmd+k",
+  "command": "workbench.action.showCommands"
+},
+{
+  "key": "shift+cmd+p",
+  "command": "-workbench.action.showCommands"
 }
 ]
