@@ -76,7 +76,7 @@
   "command": "-workbench.action.navigateToLastEditLocation"
 },
 {
-  "key": "cmd+k g",
+  "key": "cmd+k cmd+g",
   "command": "extension.openInGitHub"
 },
 {
@@ -84,7 +84,7 @@
   "command": "-extension.openInGitHub"
 },
 {
-  "key": "cmd+k p",
+  "key": "cmd+k cmd+p",
   "command": "extension.openPrGitProvider"
 },
 {
