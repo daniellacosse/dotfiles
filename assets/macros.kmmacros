@@ -13,234 +13,101 @@
 				<key>Actions</key>
 				<array>
 					<dict>
-						<key>Conditions</key>
-						<dict>
-							<key>ConditionList</key>
-							<array>
-								<dict>
-									<key>Application</key>
-									<dict>
-										<key>BundleIdentifier</key>
-										<string>com.microsoft.VSCode</string>
-										<key>Name</key>
-										<string>Visual Studio Code</string>
-										<key>NewFile</key>
-										<string>/Applications/Visual Studio Code.app</string>
-									</dict>
-									<key>ApplicationConditionType</key>
-									<string>Running</string>
-									<key>ConditionType</key>
-									<string>Application</string>
-								</dict>
-							</array>
-							<key>ConditionListMatch</key>
-							<string>All</string>
-						</dict>
-						<key>ElseActions</key>
-						<array>
-							<dict>
-								<key>AllWindows</key>
-								<false/>
-								<key>AlreadyActivatedActionType</key>
-								<string>Normal</string>
-								<key>Application</key>
-								<dict>
-									<key>BundleIdentifier</key>
-									<string>com.microsoft.VSCode</string>
-									<key>Name</key>
-									<string>Visual Studio Code</string>
-									<key>NewFile</key>
-									<string>/Applications/Visual Studio Code.app</string>
-								</dict>
-								<key>MacroActionType</key>
-								<string>ActivateApplication</string>
-								<key>ReopenWindows</key>
-								<false/>
-								<key>TimeOutAbortsMacro</key>
-								<true/>
-							</dict>
-						</array>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(Main,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(Main,Left)</string>
 						<key>MacroActionType</key>
-						<string>IfThenElse</string>
-						<key>ThenActions</key>
-						<array>
-							<dict>
-								<key>AllWindows</key>
-								<false/>
-								<key>AlreadyActivatedActionType</key>
-								<string>Normal</string>
-								<key>Application</key>
-								<dict>
-									<key>BundleIdentifier</key>
-									<string>com.microsoft.VSCode</string>
-									<key>Name</key>
-									<string>Visual Studio Code</string>
-									<key>NewFile</key>
-									<string>/Applications/Visual Studio Code.app</string>
-								</dict>
-								<key>MacroActionType</key>
-								<string>ActivateApplication</string>
-								<key>ReopenWindows</key>
-								<false/>
-								<key>TimeOutAbortsMacro</key>
-								<true/>
-							</dict>
-							<dict>
-								<key>KeyCode</key>
-								<integer>37</integer>
-								<key>MacroActionType</key>
-								<string>SimulateKeystroke</string>
-								<key>Modifiers</key>
-								<integer>768</integer>
-								<key>ReleaseAll</key>
-								<false/>
-								<key>TargetApplication</key>
-								<dict/>
-								<key>TargetingType</key>
-								<string>Front</string>
-							</dict>
-						</array>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.microsoft.VSCode</string>
+							<key>Name</key>
+							<string>Visual Studio Code</string>
+							<key>NewFile</key>
+							<string>/Applications/Visual Studio Code.app</string>
+						</dict>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Specific</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(Main,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(Main,Width)*50%</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
 					</dict>
 					<dict>
-						<key>Conditions</key>
-						<dict>
-							<key>ConditionList</key>
-							<array>
-								<dict>
-									<key>Application</key>
-									<dict>
-										<key>BundleIdentifier</key>
-										<string>com.microsoft.VSCode</string>
-										<key>Name</key>
-										<string>Visual Studio Code</string>
-										<key>NewFile</key>
-										<string>/Applications/Visual Studio Code.app</string>
-									</dict>
-									<key>ConditionType</key>
-									<string>FrontWindow</string>
-									<key>FrontWindowConditionType</key>
-									<string>TitleContains</string>
-									<key>FrontWindowTitle</key>
-									<string>Welcome</string>
-									<key>IsFrontApplication</key>
-									<false/>
-								</dict>
-								<dict>
-									<key>Application</key>
-									<dict>
-										<key>BundleIdentifier</key>
-										<string>com.microsoft.VSCode</string>
-										<key>Name</key>
-										<string>Visual Studio Code</string>
-										<key>NewFile</key>
-										<string>/Applications/Visual Studio Code.app</string>
-									</dict>
-									<key>ConditionType</key>
-									<string>FrontWindow</string>
-									<key>FrontWindowConditionType</key>
-									<string>IsFullScreen</string>
-									<key>IsFrontApplication</key>
-									<false/>
-								</dict>
-							</array>
-							<key>ConditionListMatch</key>
-							<string>Any</string>
-						</dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(Main,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(Main,MidX)</string>
 						<key>MacroActionType</key>
-						<string>PauseUntil</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>org.mozilla.firefox</string>
+							<key>Name</key>
+							<string>Firefox</string>
+							<key>NewFile</key>
+							<string>/Applications/Firefox.app</string>
+						</dict>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Specific</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(Main,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(Main,Width)*50%</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
 					</dict>
-				</array>
-				<key>CreationDate</key>
-				<real>571762735.331267</real>
-				<key>ModificationDate</key>
-				<real>572292943.49620104</real>
-				<key>Name</key>
-				<string>New VSCode Window</string>
-				<key>Triggers</key>
-				<array/>
-				<key>UID</key>
-				<string>FFBCFC7D-DEFA-4E3F-BB19-54A7CF787AAE</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>WayneBoard Macros</string>
-		<key>ToggleMacroUID</key>
-		<string>EF8E0DD7-2C75-4A34-9535-ACFF52D1FA0C</string>
-		<key>UID</key>
-		<string>3514F673-D435-43DF-9AF3-92BA60676E31</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>CreationDate</key>
-		<real>571768755.16065502</real>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
 					<dict>
 						<key>Asynchronously</key>
-						<false/>
-						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
 						<string>ExecuteMacro</string>
 						<key>MacroUID</key>
-						<string>FFBCFC7D-DEFA-4E3F-BB19-54A7CF787AAE</string>
+						<string>DBB6407F-C544-4970-856A-039D2C2C2693</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>UseParameter</key>
 						<false/>
 					</dict>
-					<dict>
-						<key>MacroActionType</key>
-						<string>Pause</string>
-						<key>Time</key>
-						<string>1</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>KeyCode</key>
-						<integer>15</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>2304</integer>
-						<key>ReleaseAll</key>
-						<false/>
-						<key>TargetApplication</key>
-						<dict/>
-						<key>TargetingType</key>
-						<string>Front</string>
-					</dict>
 				</array>
 				<key>CreationDate</key>
-				<real>571764208.80279505</real>
+				<real>602046378.96645606</real>
 				<key>ModificationDate</key>
-				<real>572307072.93873596</real>
+				<real>602046462.71287894</real>
 				<key>Name</key>
-				<string>Open Git Project in VSCode</string>
+				<string>default setup</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>100</integer>
+						<integer>118</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
-						<integer>0</integer>
+						<integer>256</integer>
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>BF8A5EC0-0ECF-4D31-970E-48864EFCB43F</string>
+				<string>BAA5DED2-D5E9-4873-A517-E09A47A33371</string>
 			</dict>
 		</array>
 		<key>Name</key>
@@ -261,245 +128,53 @@
 				<key>Actions</key>
 				<array>
 					<dict>
-						<key>Asynchronously</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>ExecuteMacro</string>
-						<key>MacroUID</key>
-						<string>FFBCFC7D-DEFA-4E3F-BB19-54A7CF787AAE</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>UseParameter</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>KeyCode</key>
+						<key>Alpha</key>
 						<integer>50</integer>
+						<key>Blue</key>
+						<integer>128</integer>
+						<key>Green</key>
+						<integer>128</integer>
+						<key>HideOthers</key>
+						<false/>
+						<key>IconSize</key>
+						<integer>112</integer>
+						<key>IncludedApplications</key>
+						<array/>
 						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
+						<string>ProgramSwitcher</string>
+						<key>MouseRollover</key>
+						<true/>
+						<key>Red</key>
+						<integer>0</integer>
+						<key>SortOrder</key>
+						<string>SortByUse</string>
+						<key>SwitcherUnderMouse</key>
+						<true/>
+						<key>WindowType</key>
+						<string>IconGrid</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>602046252.45173097</real>
+				<key>ModificationDate</key>
+				<real>602046365.68333101</real>
+				<key>Name</key>
+				<string>app switcher</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>118</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
 						<key>Modifiers</key>
 						<integer>4096</integer>
-						<key>ReleaseAll</key>
-						<false/>
-						<key>TargetApplication</key>
-						<dict/>
-						<key>TargetingType</key>
-						<string>Front</string>
-					</dict>
-				</array>
-				<key>CreationDate</key>
-				<real>571764222.30347204</real>
-				<key>ModificationDate</key>
-				<real>572307077.40702701</real>
-				<key>Name</key>
-				<string>Open Terminal in VSCode</string>
-				<key>Triggers</key>
-				<array/>
-				<key>UID</key>
-				<string>2143E116-4AB2-43CB-BD66-358BDED0DF14</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>WayneBoard Macros</string>
-		<key>ToggleMacroUID</key>
-		<string>EF8E0DD7-2C75-4A34-9535-ACFF52D1FA0C</string>
-		<key>UID</key>
-		<string>3514F673-D435-43DF-9AF3-92BA60676E31</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>CreationDate</key>
-		<real>571768755.16065502</real>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>Asynchronously</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>ExecuteMacro</string>
-						<key>MacroUID</key>
-						<string>DB6AD22F-EA27-4072-AC84-61926BC160AD</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>UseParameter</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>KeyCode</key>
-						<integer>35</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>4096</integer>
-						<key>ReleaseAll</key>
-						<false/>
-						<key>TargetApplication</key>
-						<dict/>
-						<key>TargetingType</key>
-						<string>Front</string>
-					</dict>
-					<dict>
-						<key>KeyCode</key>
-						<integer>15</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-						<key>ReleaseAll</key>
-						<false/>
-						<key>TargetApplication</key>
-						<dict/>
-						<key>TargetingType</key>
-						<string>Front</string>
-					</dict>
-				</array>
-				<key>CreationDate</key>
-				<real>572307457.35646904</real>
-				<key>ModificationDate</key>
-				<real>572307573.33935595</real>
-				<key>Name</key>
-				<string>Open VSCode Pull Request</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>103</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>E9C32309-75C7-442E-8359-EDDEF3FB92DA</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>WayneBoard Macros</string>
-		<key>ToggleMacroUID</key>
-		<string>EF8E0DD7-2C75-4A34-9535-ACFF52D1FA0C</string>
-		<key>UID</key>
-		<string>3514F673-D435-43DF-9AF3-92BA60676E31</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>CreationDate</key>
-		<real>571768755.16065502</real>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>Asynchronously</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>ExecuteMacro</string>
-						<key>MacroUID</key>
-						<string>DB6AD22F-EA27-4072-AC84-61926BC160AD</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>UseParameter</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>KeyCode</key>
-						<integer>15</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-						<key>TargetApplication</key>
-						<dict/>
-						<key>TargetingType</key>
-						<string>Front</string>
-					</dict>
-				</array>
-				<key>CreationDate</key>
-				<real>572307128.27023196</real>
-				<key>ModificationDate</key>
-				<real>572308833.41405106</real>
-				<key>Name</key>
-				<string>Search Project in VSCode</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>101</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>61F4687E-5E9F-4022-9566-EA68CCC38C61</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>WayneBoard Macros</string>
-		<key>ToggleMacroUID</key>
-		<string>EF8E0DD7-2C75-4A34-9535-ACFF52D1FA0C</string>
-		<key>UID</key>
-		<string>3514F673-D435-43DF-9AF3-92BA60676E31</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>CreationDate</key>
-		<real>571768755.16065502</real>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>KeyCode</key>
-						<integer>49</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-						<key>TargetApplication</key>
-						<dict/>
-						<key>TargetingType</key>
-						<string>Front</string>
-					</dict>
-				</array>
-				<key>CreationDate</key>
-				<real>572307679.59871805</real>
-				<key>ModificationDate</key>
-				<real>572307698.97978199</real>
-				<key>Name</key>
-				<string>Search System</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>120</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>6DF134F8-F094-4609-8CCB-FDA3458AF8D0</string>
+				<string>FC1E477A-2A2B-4A20-A831-EFABC434BA31</string>
 			</dict>
 		</array>
 		<key>Name</key>
@@ -523,9 +198,9 @@
 						<key>Action</key>
 						<string>MoveAndResize</string>
 						<key>HeightExpression</key>
-						<string>SCREENVISIBLE(1,Height)</string>
+						<string>SCREENVISIBLE(MAIN,Height)</string>
 						<key>HorizontalExpression</key>
-						<string>SCREENVISIBLE(1,Left)</string>
+						<string>SCREENVISIBLE(MAIN,Left)</string>
 						<key>MacroActionType</key>
 						<string>ManipulateWindow</string>
 						<key>TargetApplication</key>
@@ -535,9 +210,9 @@
 						<key>TargetingType</key>
 						<string>Front</string>
 						<key>VerticalExpression</key>
-						<string>SCREENVISIBLE(1,Top)</string>
+						<string>SCREENVISIBLE(MAIN,Top)</string>
 						<key>WidthExpression</key>
-						<string>SCREENVISIBLE(1,Width)*50%</string>
+						<string>SCREENVISIBLE(MAIN,Width)</string>
 						<key>WindowIndexExpression</key>
 						<string>2</string>
 						<key>WindowName</key>
@@ -545,18 +220,18 @@
 					</dict>
 				</array>
 				<key>CreationDate</key>
-				<real>572307719.40837502</real>
+				<real>602044517.52199304</real>
 				<key>ModificationDate</key>
-				<real>572308110.19644701</real>
+				<real>602044538.04906499</real>
 				<key>Name</key>
-				<string>Send active window left</string>
+				<string>send active window full</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>97</integer>
+						<integer>118</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
@@ -564,7 +239,7 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>28852E94-1BB9-444F-8AB6-DA77856AF3C5</string>
+				<string>B8617F87-E3BE-4B5B-8B29-50D8CA9EB0CA</string>
 			</dict>
 		</array>
 		<key>Name</key>
@@ -588,9 +263,9 @@
 						<key>Action</key>
 						<string>MoveAndResize</string>
 						<key>HeightExpression</key>
-						<string>SCREENVISIBLE(1,Height)</string>
+						<string>SCREENVISIBLE(2,Height)</string>
 						<key>HorizontalExpression</key>
-						<string>SCREENVISIBLE(1,MidX)</string>
+						<string>SCREENVISIBLE(2,Left)</string>
 						<key>MacroActionType</key>
 						<string>ManipulateWindow</string>
 						<key>TargetApplication</key>
@@ -600,9 +275,394 @@
 						<key>TargetingType</key>
 						<string>Front</string>
 						<key>VerticalExpression</key>
-						<string>SCREENVISIBLE(1,Top)</string>
+						<string>SCREENVISIBLE(2,Top)</string>
 						<key>WidthExpression</key>
-						<string>SCREENVISIBLE(1,Width)*50%</string>
+						<string>SCREENVISIBLE(2,Width)</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>582317277.48353398</real>
+				<key>ModificationDate</key>
+				<real>602044552.72779095</real>
+				<key>Name</key>
+				<string>send active window to side</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>98</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>55BAB931-A9AE-483F-A7D6-3DF8292EA853</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>WayneBoard Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>EF8E0DD7-2C75-4A34-9535-ACFF52D1FA0C</string>
+		<key>UID</key>
+		<string>3514F673-D435-43DF-9AF3-92BA60676E31</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>571768755.16065502</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(2,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(2,Left)</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.apple.iCal</string>
+							<key>Name</key>
+							<string>Calendar</string>
+							<key>NewFile</key>
+							<string>/Applications/Calendar.app</string>
+						</dict>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Specific</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(2,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(2,Width)</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(2,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(2,Left)</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.kapeli.dashdoc</string>
+							<key>Name</key>
+							<string>Dash</string>
+							<key>NewFile</key>
+							<string>/Applications/Dash.app</string>
+						</dict>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Specific</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(2,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(2,Width)</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(2,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(2,Left)</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.apple.iTunes</string>
+							<key>Name</key>
+							<string>iTunes</string>
+							<key>NewFile</key>
+							<string>/Applications/iTunes.app</string>
+						</dict>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Specific</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(2,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(2,Width)</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(2,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(2,Left)</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.stairways.keyboardmaestro.editor</string>
+							<key>Name</key>
+							<string>Keyboard Maestro</string>
+							<key>NewFile</key>
+							<string>/Applications/Keyboard Maestro.app</string>
+						</dict>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Specific</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(2,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(2,Width)</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(2,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(2,Left)</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.focusrite.SaffireMixControl2</string>
+							<key>Name</key>
+							<string>Saffire MixControl</string>
+							<key>NewFile</key>
+							<string>/Applications/Saffire MixControl.app</string>
+						</dict>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Specific</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(2,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(2,Width)</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(2,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(2,Left)</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.tinyspeck.slackmacgap</string>
+							<key>Name</key>
+							<string>Slack</string>
+							<key>NewFile</key>
+							<string>/Applications/Slack.app</string>
+						</dict>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Specific</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(2,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(2,Width)</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(2,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(2,Left)</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.wacom.Wacom-Desktop-Center</string>
+							<key>Name</key>
+							<string>Wacom Desktop Center</string>
+							<key>NewFile</key>
+							<string>/Applications/Wacom Tablet.localized/Wacom Desktop Center.app</string>
+						</dict>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Specific</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(2,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(2,Width)</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(2,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(2,Left)</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.apple.iChat</string>
+							<key>Name</key>
+							<string>Messages</string>
+							<key>NewFile</key>
+							<string>/Applications/Messages.app</string>
+						</dict>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Specific</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(2,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(2,Width)</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(2,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(2,Left)</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>WhatsApp</string>
+							<key>Name</key>
+							<string>WhatsApp</string>
+							<key>NewFile</key>
+							<string>/Applications/WhatsApp.app</string>
+						</dict>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Specific</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(2,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(2,Width)</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>602044585.28744495</real>
+				<key>ModificationDate</key>
+				<real>602045625.79819298</real>
+				<key>Name</key>
+				<string>move non-work programs to the side</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>98</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>DBB6407F-C544-4970-856A-039D2C2C2693</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>WayneBoard Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>EF8E0DD7-2C75-4A34-9535-ACFF52D1FA0C</string>
+		<key>UID</key>
+		<string>3514F673-D435-43DF-9AF3-92BA60676E31</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>571768755.16065502</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(MAIN,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(MAIN,MidX)</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Front</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(MAIN,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(MAIN,Width)*50%</string>
 						<key>WindowIndexExpression</key>
 						<string>2</string>
 						<key>WindowName</key>
@@ -612,16 +672,16 @@
 				<key>CreationDate</key>
 				<real>572307888.37868798</real>
 				<key>ModificationDate</key>
-				<real>572308792.873402</real>
+				<real>602044498.34679103</real>
 				<key>Name</key>
-				<string>Send active window right</string>
+				<string>send active window right</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>98</integer>
+						<integer>97</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
@@ -650,37 +710,51 @@
 				<key>Actions</key>
 				<array>
 					<dict>
-						<key>AllWindows</key>
-						<true/>
-						<key>AlreadyActivatedActionType</key>
-						<string>Normal</string>
-						<key>Application</key>
-						<dict>
-							<key>BundleIdentifier</key>
-							<string>com.microsoft.VSCode</string>
-							<key>Name</key>
-							<string>Visual Studio Code</string>
-							<key>NewFile</key>
-							<string>/Applications/Visual Studio Code.app</string>
-						</dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(MAIN,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(MAIN,Left)</string>
 						<key>MacroActionType</key>
-						<string>ActivateApplication</string>
-						<key>ReopenWindows</key>
-						<false/>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Front</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(MAIN,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(MAIN,Width)*50%</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
 					</dict>
 				</array>
 				<key>CreationDate</key>
-				<real>572307211.775841</real>
+				<real>572307719.40837502</real>
 				<key>ModificationDate</key>
-				<real>572307265.88139403</real>
+				<real>602044503.98284698</real>
 				<key>Name</key>
-				<string>Show VSCode</string>
+				<string>send active window left</string>
 				<key>Triggers</key>
-				<array/>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>96</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
 				<key>UID</key>
-				<string>DB6AD22F-EA27-4072-AC84-61926BC160AD</string>
+				<string>28852E94-1BB9-444F-8AB6-DA77856AF3C5</string>
 			</dict>
 		</array>
 		<key>Name</key>
