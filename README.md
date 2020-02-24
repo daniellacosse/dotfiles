@@ -4,12 +4,9 @@ machine-level setup scripts and config files
 
 ## initial
 
-**NOTE: this setup requires OSX13, High Sierra**
+**NOTE: this setup requires OSX13+, High Sierra or later**
 
--  install `homebrew`: [ [mac](https://brew.sh/) | [linux](https://docs.brew.sh/Homebrew-on-Linux) ]
+-  sign into iCloud via system preferences: `open /System/Library/PreferencePanesiCloudPref.prefPane`
+-  install `homebrew`: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"`
 - ☁️ [download the zip](https://github.com/daniellacosse/dotfiles/archive/master.zip)
-- 🛠 run `make`
-
-## TODO: bootcamp
-
-> - ♻️ switch to your windows partition somehow (lol)
+- 🛠 cd inside && run `make`
