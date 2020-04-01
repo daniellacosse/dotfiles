@@ -32,6 +32,7 @@ mas "Giphy Capture", id: 668208984
 # communications
 cask "slack"
 cask "whatsapp"
+cask "protonmail-bridge"
 
 # editors
 cask "runjs"
