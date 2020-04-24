@@ -7,6 +7,7 @@ brew "make"
 # javascript
 brew "nvm"
 brew "yarn"
+cask "docker"
 
 # web browsers
 cask "firefox"
