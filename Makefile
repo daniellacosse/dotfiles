@@ -1,4 +1,5 @@
 SHELL:=/bin/bash
+HOMEBREW=$(shell which brew)
 
 HOME_FOLDER=~
 LIBRARY_FOLDER=$(HOME_FOLDER)/Library
@@ -23,7 +24,7 @@ MAESTRO_LICENSE=$(LICENSE_FOLDER)/license.keyboard-maestro
 MACROS=$(ASSETS_FOLDER)/macros.kmmacros
 
 BASH_PROFILE=$(BASH_FOLDER)/profile
-BASH_AUTOCOMPLETION=$(BASH_FOLDER)/git-autocompletion.bash
+BASH_AUTOCOMPLETION=git-autocompletion.bash
 BASH_SCRIPTS=$(BASH_FOLDER)/scripts
 
 SYSTEM_BASH_PROFILE=$(HOME_FOLDER)/.bash_profile
@@ -46,49 +47,29 @@ SYSTEM_PREFERENCE_PANES_FOLDER=/System/Library/PreferencePanes
 default: $(TMP_FOLDER) $(LICENSE_FOLDER)
 	make $(TMP_FILES) ;\
 	\
-	read -p "1/14) set colors & default browser" ;\
-	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Appearance.prefPane/ ;\
-	\
-	read -p "2/14) set accessibility preferences" ;\
-	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/UniversalAccessPref.prefPane/ ;\
-	\
-	read -p "3/14) set date and time preferences" ;\
-	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/DateAndTime.prefPane/ ;\
-	\
-	read -p "4/14) set login options - turn off guest account" ;\
-	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Account.prefPane/ ;\
-	\
-	read -p "5/14) set login options - security settings" ;\
-	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Security.prefPane/ ;\
-	\
-	read -p "6/14) arrange windows & click-drag the little white bar over to the main display" ;\
-	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Displays.prefPane/ ;\
-	\
-	read -p "7/14) wire photos to iCloud" ;\
-	open /Applications/Photos.app/ ;\
-	\
-	read -p "8/14) select the photos album -Wallpapers- as the Desktop" ;\
-	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/DesktopScreenEffectsPref.prefPane/ ;\
-	\
-	read -p "9/14 setup touchbar, then turn off function key shortcuts in the Shortcuts tab." ;\
-	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Keyboard.prefPane/ ;\
-	\
-	read -p "10/14) connect bluetooth keyboard and trackpad" ;\
-	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Bluetooth.prefPane/ ;\
-	\
-	read -p "11/14) open and setup all background apps" ;\
-	cat $(BACKGROUND_APPLICATIONS_LIST) | xargs -L 1 open ;\
-	\
-	read -p "12/14) create and add ssh key to github" ;\
+	read -p "1/8) create and add ssh key to github" ;\
 	make $(SYSTEM_SSH_PEM)
 	\
-	read -p "13/14) add license key && macros" ;\
-	cat $(MAESTRO_LICENSE) ;\
-	open /Application/Dash.app/ ;\
-	open $(MACROS) ;\
+	read -p "2/8) set colors & default browser" ;\
+	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Appearance.prefPane/ ;\
 	\
-	read -p "14/14) setup nvidia eGPU. make sure it's not plugged in now - hot-plug it in after startup but before login" ;\
-	bash <(curl -s https://raw.githubusercontent.com/learex/macOS-eGPU/master/macOS-eGPU.sh)
+	read -p "3/8) set accessibility preferences" ;\
+	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/UniversalAccessPref.prefPane/ ;\
+	\
+	read -p "4/8) set date and time preferences" ;\
+	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/DateAndTime.prefPane/ ;\
+	\
+	read -p "5/8) arrange windows & click-drag the little white bar over to the main display" ;\
+	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Displays.prefPane/ ;\
+	\
+	read -p "6/8) select the photos album -Wallpapers- as the Desktop" ;\
+	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/DesktopScreenEffectsPref.prefPane/ ;\
+	\
+	read -p "7/8) open and setup all background apps" ;\
+	cat $(BACKGROUND_APPLICATIONS_LIST) | xargs -L 1 open ;\
+	\
+	read -p "8/8) install saffire mixcontrol separately" ;\
+	open https://fael-downloads-prod.focusrite.com/customer/prod/s3fs-public/downloads/Saffire%20MixControl-3.9.3168_0.dmg ;\
 
 update: $(TMP_FOLDER)
 	make $(TMP_FOLDER)/update
@@ -97,24 +78,19 @@ $(TMP_FOLDER)/update: $(TMP_FILES)
 
 # -- cache --
 
-$(TMP_FOLDER)/last_brew: Brewfile
+$(TMP_FOLDER)/last_brew: $(HOMEBREW) Brewfile
 	brew bundle --force \
 		> $(TMP_FOLDER)/last_brew
-
-Brewfile: # track
 
 $(TMP_FOLDER)/last_bash: $(BASH_PROFILE) $(BASH_SCRIPTS)
 	chmod -R u+x $(BASH_SCRIPTS)													> $(TMP_FOLDER)/last_bash 2>&1 ;\
 	cp -R $(BASH_SCRIPTS)/. $(HOME_FOLDER)/.bash_scripts 	>> $(TMP_FOLDER)/last_bash ;\
 	\
-	cp $(BASH_AUTOCOMPLETION) $(HOME_FOLDER)/.$(BASH_AUTOCOMPLETION) >> $(TMP_FOLDER)/last_bash ;\
+	cp $(BASH_FOLDER)/$(BASH_AUTOCOMPLETION) $(HOME_FOLDER)/$(BASH_AUTOCOMPLETION) >> $(TMP_FOLDER)/last_bash ;\
 	\
 	cp $(BASH_PROFILE) $(HOME_FOLDER)/.bash_profile					>> $(TMP_FOLDER)/last_bash ;\
 	source $(HOME_FOLDER)/.bash_profile											>> $(TMP_FOLDER)/last_bash 2>&1 ;\
-	nvm install $(cat package.json | jq -r '.engines.node') >> $(TMP_FOLDER)/last_bash
-
-$(BASH_PROFILE):
-$(BASH_SCRIPTS): # track
+	nvm install $(shell cat package.json | jq -r '.engines.node') >> $(TMP_FOLDER)/last_bash
 
 $(TMP_FOLDER)/last_yarn: package.json
 	cat package.json |\
@@ -122,16 +98,12 @@ $(TMP_FOLDER)/last_yarn: package.json
 		xargs -L 1 yarn global add \
 			> $(TMP_FOLDER)/last_yarn
 
-package.json: # track
-
 $(TMP_FOLDER)/last_code: $(TMP_FOLDER)/last_brew .vscode/extensions.json
 	sudo cp -fa .vscode/. $(SYSTEM_APPS_CONFIG)/Code/User ;\
 	cat .vscode/extensions.json |\
 		jq -r '.recommendations | .[]' |\
 		xargs -L 1 code --install-extension \
 			> $(TMP_FOLDER)/last_code
-
-.vscode/extensions.json: # track
 
 $(SYSTEM_SSH_PEM): $(SYSTEM_SSH_FOLDER)
 	read -p "Enter your email address: " email ;\
@@ -158,3 +130,6 @@ $(LICENSE_FOLDER):
 
 $(LICENSE_ZIP):
 	zip -uer $(LICENSE_ZIP) $(LIBRARY_FOLDER)
+
+$(HOMEBREW):
+	$(SHELL) -c "$$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"

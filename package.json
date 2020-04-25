@@ -1,13 +1,14 @@
 {
-  "engines": {
-    "node": "12.0.0"
-  },
   "dependencies": {
-    "@daniellacosse/accounting-cli": "^0.0.16",
-    "@daniellacosse/generator-typescript": "^0.0.3",
-    "typescript": "",
-    "ts-node": "^7.0.0",
-    "yo": "^2.0.5",
-    "concurrently": "^3.6.0"
+    "@daniellacosse/accounting-cli": "^0.0.21",
+    "@daniellacosse/generator-typescript": "^0.0.5",
+    "@vue/cli": "4.3.1",
+    "concurrently": "^5.2.0",
+    "ts-node": "^8.9.0",
+    "typescript": "3.8.3"
+  },
+  "engines": {
+    "node": "12.0.0",
+    "yarn": "1.22.4"
   }
 }

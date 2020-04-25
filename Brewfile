@@ -45,11 +45,13 @@ mas "Pages", id: 409201541
 brew "ffmpeg"
 brew "imagemagick"
 cask "blender"
-cask "clip-studio-paint"
-cask "homebrew/cask-drivers/focusrite-saffire-mixcontrol"
 cask "native-access"
 cask "obs"
 cask "steam"
 cask "vlc"
 mas "DaVinci Resolve", id: 571213070
 mas "Logic Pro X", id: 634148309
+
+# package installers
+cask "clip-studio-paint"
+cask "wacom-tablet"

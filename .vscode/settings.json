@@ -1,7 +1,10 @@
 {
   "breadcrumbs.enabled": true,
   "editor.renderWhitespace": "boundary",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.wordWrapColumn": 95,
+  "eslint.packageManager": "yarn",
+  "eslint.run": "onSave",
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "git.autofetch": true,
@@ -16,5 +19,25 @@
   "javascript.implicitProjectConfig.experimentalDecorators": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "window.zoomLevel": 3
+  "window.zoomLevel": 3,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.startupEditor": "newUntitledFile",
+  // you'll have to wire this up
+  "atlascode.jira.jqlList": [
+    {
+      "enabled": true,
+      "monitor": true
+    }
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "atlascode.jira.lastCreateSiteAndProject": {
+  }
 }
