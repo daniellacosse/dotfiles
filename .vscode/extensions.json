@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "achil.vscode-javascript-repl",
     "dbaeumer.vscode-eslint",
     "deerawan.vscode-dash",
     "eamodio.gitlens",
@@ -16,6 +17,6 @@
     "wix.vscode-import-cost",
     "yzhang.markdown-all-in-one",
     "zengxingxin.sort-js-object-keys",
-    "ziyasal.vscode-open-in-github"
+    "ziyasal.vscode-open-in-github",
   ]
 }

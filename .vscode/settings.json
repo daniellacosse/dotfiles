@@ -19,7 +19,7 @@
   "javascript.implicitProjectConfig.experimentalDecorators": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "window.zoomLevel": 3,
+  "window.zoomLevel": 1,
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

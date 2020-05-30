@@ -5,7 +5,6 @@ brew "git"
 brew "make"
 
 # javascript
-brew "nvm"
 brew "yarn"
 cask "docker"
 
@@ -31,12 +30,11 @@ cask "wacom-tablet"
 mas "Giphy Capture", id: 668208984
 
 # communications
+cask "discord"
 cask "slack"
 cask "whatsapp"
-cask "protonmail-bridge"
 
 # editors
-cask "runjs"
 cask "visual-studio-code"
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
@@ -45,13 +43,11 @@ mas "Pages", id: 409201541
 brew "ffmpeg"
 brew "imagemagick"
 cask "blender"
+cask "clip-studio-paint"
+cask "figma"
 cask "native-access"
 cask "obs"
 cask "steam"
 cask "vlc"
 mas "DaVinci Resolve", id: 571213070
 mas "Logic Pro X", id: 634148309
-
-# package installers
-cask "clip-studio-paint"
-cask "wacom-tablet"

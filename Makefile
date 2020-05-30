@@ -47,29 +47,34 @@ SYSTEM_PREFERENCE_PANES_FOLDER=/System/Library/PreferencePanes
 default: $(TMP_FOLDER) $(LICENSE_FOLDER)
 	make $(TMP_FILES) ;\
 	\
-	read -p "1/8) create and add ssh key to github" ;\
+	read -p "1/9) create and add ssh key to github" ;\
 	make $(SYSTEM_SSH_PEM)
 	\
-	read -p "2/8) set colors & default browser" ;\
+	read -p "2/9) set colors & default browser" ;\
 	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Appearance.prefPane/ ;\
 	\
-	read -p "3/8) set accessibility preferences" ;\
+	read -p "3/9) set accessibility preferences" ;\
 	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/UniversalAccessPref.prefPane/ ;\
 	\
-	read -p "4/8) set date and time preferences" ;\
+	read -p "4/9) set date and time preferences" ;\
 	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/DateAndTime.prefPane/ ;\
 	\
-	read -p "5/8) arrange windows & click-drag the little white bar over to the main display" ;\
+	read -p "5/9) arrange windows & click-drag the little white bar over to the main display" ;\
 	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Displays.prefPane/ ;\
 	\
-	read -p "6/8) select the photos album -Wallpapers- as the Desktop" ;\
+	read -p "6/9) select the photos album -Wallpapers- as the Desktop" ;\
 	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/DesktopScreenEffectsPref.prefPane/ ;\
 	\
-	read -p "7/8) open and setup all background apps" ;\
+	read -p "7/9) create work account" ;\
+	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Accounts.prefPane/ ;\
+	\
+	read -p "8/9) open and setup all background apps" ;\
+	open $(SYSTEM_PREFERENCE_PANES_FOLDER)/Security.prefPane/ ;\
 	cat $(BACKGROUND_APPLICATIONS_LIST) | xargs -L 1 open ;\
 	\
-	read -p "8/8) install saffire mixcontrol separately" ;\
+	read -p "9/9) install saffire mixcontrol & wacom tablet separately" ;\
 	open https://fael-downloads-prod.focusrite.com/customer/prod/s3fs-public/downloads/Saffire%20MixControl-3.9.3168_0.dmg ;\
+	open http://cdn.wacom.com/u/productsupport/drivers/mac/professional/WacomTablet_6.3.39-1.dmg
 
 update: $(TMP_FOLDER)
 	make $(TMP_FOLDER)/update
