@@ -1,4 +1,5 @@
 tap "homebrew/cask"
+tap "homebrew-ffmpeg/ffmpeg"
 
 # system
 brew "git"
@@ -40,7 +41,7 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 
 # media
-brew "ffmpeg"
+brew "homebrew-ffmpeg/ffmpeg/ffmpeg"
 brew "imagemagick"
 cask "blender"
 cask "clip-studio-paint"

@@ -1,5 +1,6 @@
 SHELL:=/bin/bash
 HOMEBREW=$(shell which brew)
+RUST=$(shell which rustc)
 
 HOME_FOLDER=~
 LIBRARY_FOLDER=$(HOME_FOLDER)/Library
@@ -44,7 +45,7 @@ SYSTEM_PREFERENCE_PANES_FOLDER=/System/Library/PreferencePanes
 # -- commands --
 .PHONY: default update
 
-default: $(TMP_FOLDER) $(LICENSE_FOLDER)
+default: $(TMP_FOLDER) $(LICENSE_FOLDER) $(RUST)
 	make $(TMP_FILES) ;\
 	\
 	read -p "1/9) create and add ssh key to github" ;\
@@ -138,3 +139,6 @@ $(LICENSE_ZIP):
 
 $(HOMEBREW):
 	$(SHELL) -c "$$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+
+$(RUST):
+	curl https://sh.rustup.rs -sSf | $(SHELL)
